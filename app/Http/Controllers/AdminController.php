@@ -20,4 +20,13 @@ class AdminController extends Controller
         return view('admin.tambahmakanan');
     }
 
+    public function tambahlokasi(){
+        return view('admin.tambahlokasi');
+    }
+
+    
+    public function tambahpegawai(){
+        return view('admin.tambahpegawai');
+    }
+
 }

@@ -21,4 +21,14 @@ class user_controller extends Controller
         $orderan = orderan::all();
         return view('user.alacartepage', compact('orderan'));
     }
+
+    public function profiluser(){
+        return view('user.profil');
+    }
+
+    public function menu(){
+        $orderan = orderan::all();
+        return view('user.homepage',compact('orderan'));
+    }
+
 }
