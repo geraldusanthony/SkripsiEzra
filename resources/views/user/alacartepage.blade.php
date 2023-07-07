@@ -56,8 +56,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <p class="w3-text-white">Welcome to Sushi Ubud Canggu!</p>
   </div>
   <div class="w3-bar-block">
-    <a href="/menu" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-white"><i class="fa fa-cutlery fa-fw w3-margin-right"></i>MENU</a> 
-    <a href="/profiluser" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>PROFIL</a> 
+    <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-white"><i class="fa fa-cutlery fa-fw w3-margin-right"></i>MENU</a> 
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> 
     <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
   </div>
   <div class="w3-panel w3-large">
@@ -166,12 +166,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
         <p><b>Sushi Roll</b></p>
         <p>Sushi dengan isian timun segar dan nasi khas jepang</p>
         <p>Rp 13.000,00</p>
-        <form id='myform' method='POST' class='quantity' action='#'>
-          <input type='button' value='-' class='qtyminus minus' field='quantity' />
-          <input type='text' name='quantity' value='0' class='qty' />
-          <input type='button' value='+' class='qtyplus plus' field='quantity' />
-        </form>
-       <br>
+        <button type="button" class="button button3" data-toggle="modal" data-target="#exampleModal">
+            Order
+         </button>
       </div>
     </div>
     <div class="w3-third w3-container w3-margin-bottom">
@@ -180,12 +177,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
         <p><b>Sushi Original</b></p>
         <p>Sushi original dengan nori dan nasi khas jepang</p>
         <p>Rp 12.000,00</p>
-        <form id='myform' method='POST' class='quantity' action='#'>
-          <input type='button' value='-' class='qtyminus minus' field='quantity' />
-          <input type='text' name='quantity' value='0' class='qty' />
-          <input type='button' value='+' class='qtyplus plus' field='quantity' />
-        </form>
-        <br>
+        <button type="button" class="button button3" data-toggle="modal" data-target="#exampleModal">
+            Order
+         </button>
       </div>
     </div>
     <div class="w3-third w3-container">
@@ -194,20 +188,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
         <p><b>Sushi Sashimi</b></p>
         <p>Sushi original jepang dengan topping daging salmon segar</p>
         <p>Rp 18.000,00</p>
-        <form id='myform' method='POST' class='quantity' action='#'>
-          <input type='button' value='-' class='qtyminus minus' field='quantity' />
-          <input type='text' name='quantity' value='0' class='qty' />
-          <input type='button' value='+' class='qtyplus plus' field='quantity' />
-        </form>
-        <br>
+        <button type="button" class="button button3" data-toggle="modal" data-target="#exampleModal">
+            Order
+         </button>
       </div>
     </div>
-    <div class="w3-row-padding w3-center">
-    <button type="button" class="button button3" data-toggle="modal" data-target="#exampleModal">
-        Order
-    </button>
-    </div>
-    <br>
     <div class="w3-row-padding">
     <table class="table">
         <tr>
