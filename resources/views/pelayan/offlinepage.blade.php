@@ -71,7 +71,7 @@ tr:nth-child(even) {
 }
 
 </style>
-    <title>ADMIN PAGE</title>
+    <title>ORDER PAGE</title>
 </head>
 <body class="w3-light-grey w3-content" style="max-width:1600px">
     <!-- Sidebar/menu -->
@@ -80,8 +80,8 @@ tr:nth-child(even) {
     <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
       <i class="fa fa-remove"></i>
     </a>
-    <h4><b>ADMIN PAGE</b></h4>
-    <p class="w3-text-white">Welcome to admin page!</p>
+    <h4><b>ORDER PAGE</b></h4>
+    <p class="w3-text-white">Welcome to order page!</p>
   </div>
 </nav>
 <nav class="w3-sidebar w3-collapse w3-red w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
@@ -89,13 +89,12 @@ tr:nth-child(even) {
     <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
       <i class="fa fa-remove"></i>
     </a>
-    <h4><b>ADMIN PAGE</b></h4>
-    <p class="w3-text-white">Welcome to admin page!</p>
+    <h4><b>ORDER PAGE</b></h4>
+    <p class="w3-text-white">Welcome to order page!</p>
   </div>
   <div class="w3-bar-block">
-  <a href="homeadmin" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-white"><i class="fa fa-area-chart fa-fw w3-margin-right"></i>DATA MAKANAN</a> 
-    <a href="tambahlokasi" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-map-marker fa-fw w3-margin-right"></i>TAMBAH LOKASI</a> 
-    <a href="tambahpegawai" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-male fa-fw w3-margin-right"></i>TAMBAH DATA PEGAWAI</a>
+    <a href="orderoffline" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-book fa-fw w3-margin-right"></i>ORDER OFFLINE</a> 
+    <a href="orderonline" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-book fa-fw w3-margin-right"></i>ORDER ONLINE</a>
     <a href="/loginkaryawan" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-sign-out fa-fw w3-margin-right"></i>LOGOUT</a>
   </div>
 </nav>
@@ -105,55 +104,37 @@ tr:nth-child(even) {
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:300px">
 <div class="w3-container">
-    <h1><b>Halaman Tambah Data Lokasi Outlet</b></h1>
+    <h1><b>Silahkan Isi Pesanan Pelanggan</b></h1>
   <header class="w3-container">
+  <div class="w3-section w3-bottombar w3-padding-6">
     <div class="modal-body">
-        <form action="/addlokasi" method="POST">
+        <form action="" method="POST">
           {{csrf_field()}}
           <div class="form-group">
-              <label for="exampleInputEmail1">Kode</label>
+              <label for="exampleInputEmail1">Nama Pelanggan</label>
               <input name="kode"type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  >
            </div>
            <div class="form-group">
-              <label for="exampleInputEmail1">Lokasi Outlet</label>
+              <label for="exampleInputEmail1">Nomor Meja</label>
               <input name="nama_lokasi"type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  >
            </div>
-           <div class="form-group">
-              <label for="exampleInputEmail1">Nama Jalan</label>
-              <input name="jalan"type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  >
-           </div>
-         </div>
 
         <div class="modal-footer">
         <button type="submit" class="btn btn-primary w3-red">TAMBAH DATA</button>
       </form>
     </div>
+</div>
   </header>
 </div>    
 </div>
+<div class="w3-main" style="margin-left:300px">
+<div class="w3-container">
+<h1><b>MENU dan HARGA</b></h1>
+</div>
 
-<div class="w3-row" style="margin-left:320px">
-    <h1><b>Data Lokasi Outlet Sushi Key</b></h1>
-    <table class="table">
-        <tr>
-        <th>Kode</th>
-        <th>Lokasi Outlet</th> 
-        <th>Nama Jalan</th>
-        <th>Action</th>
-        </tr>
-        @foreach($data_lokasi as $lokasi)
-        <tr>
-        <td>{{$lokasi->kode}}</td>   
-        <td>{{$lokasi->nama_lokasi}}</td> 
-        <td>{{$lokasi->jalan}}</td> 
-        <td><a href="/prosesviewdatalokasi/{{$lokasi->id}}" class="btn fa fa-edit w3-blue"></a><a> </a><a href="/deletelokasi/{{$lokasi->id}}" class="btn fa fa-trash w3-red"></a></td>
-        </tr>
-        @endforeach
-        </tr>
+</div>
 
-      </div>
 
-     
  
 
 

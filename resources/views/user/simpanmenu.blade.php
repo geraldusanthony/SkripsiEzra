@@ -40,6 +40,21 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   background-color: #f44336;
   color: white;
 }
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
 
 
 </style>
@@ -75,19 +90,31 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
     <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
     <div class="w3-container">
-    <h1><b>Menu Sushi Alacarte</b></h1>
-    <div class="w3-section w3-bottombar w3-padding-16">
-      <span class="w3-margin-right">Filter:</span> 
-      <button class="w3-button w3-black">ALL</button>
-      <a href="/homepage"><button class="w3-button w3-white"><i class="fa fa-cutlery w3-margin-right"></i>Paket Sushi</button></a>
-      <a href="/pagealacarte"><button class="w3-button w3-white w3-hide-small"><i class="fa fa-cutlery w3-margin-right"></i>Ala Carte Sushi</button></a>
-      <a href="/pageminuman"><button class="w3-button w3-white w3-hide-small"><i class="fa fa fa-glass w3-margin-right"></i>Minuman</button></a>
+    <h1><b>KERANJANG</b></h1>
+    <div class="w3-section w3-bottombar ">
     </div>
-    </div>
+    <table>
+  <tr>
+    <th>Menu</th>
+    <th>Qty</th>
+    <th>Action</th>
+  </tr>
+  <tr>
+    <td>Sushi Sashimi + Es Teh Rp. 31.000</td>
+    <td><form id='myform' method='POST' class='quantity' action='#'>
+          <input type='button' value='-' class='qtyminus minus' field='quantity' />
+          <input type='text' name='quantity' value='0' class='qty' />
+          <input type='button' value='+' class='qtyplus plus' field='quantity' />
+        </form></td>
+    <td>Action Bayar dan hapus</td>
+  </tr>
+</table> 
+<button type="button" class="button button3" data-toggle="modal" data-target="#exampleModal">
+            Order
+         </button>   
   </header>
-  
-   <!-- MODAL --> 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- MODAL --> 
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 <div class="modal-dialog" role="document">
 <div class="modal-content">
 <div class="modal-header">
@@ -144,9 +171,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
                                         </div>
                                     </div>
                                     </div>
-                                   
-                                   
-                                   
+
 <div class="modal-footer">
 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 <button type="submit" class="btn btn-primary">Submit</button>
@@ -158,73 +183,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 </div>
 <!-- ENDMODAL -->
 
-  <!-- First Photo Grid-->
-  <div class="w3-row-padding">
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="asset\images\sushi_3.jpg" alt="" style="width:100%">
-      <div class="w3-container w3-white">
-        <p><b>Sushi Roll</b></p>
-        <p>Sushi dengan isian timun segar dan nasi khas jepang</p>
-        <p>Rp 13.000,00</p>
-        <form id='myform' method='POST' class='quantity' action='#'>
-          <input type='button' value='-' class='qtyminus minus' field='quantity' />
-          <input type='text' name='quantity' value='0' class='qty' />
-          <input type='button' value='+' class='qtyplus plus' field='quantity' />
-        </form>
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="asset\images\sushi_3.jpg" alt="" style="width:100%">
-      <div class="w3-container w3-white">
-        <p><b>Sushi Original</b></p>
-        <p>Sushi original dengan nori dan nasi khas jepang</p>
-        <p>Rp 12.000,00</p>
-        <form id='myform' method='POST' class='quantity' action='#'>
-          <input type='button' value='-' class='qtyminus minus' field='quantity' />
-          <input type='text' name='quantity' value='0' class='qty' />
-          <input type='button' value='+' class='qtyplus plus' field='quantity' />
-        </form>
-      </div>
-    </div>
-    <div class="w3-third w3-container">
-      <img src="asset\images\sushi_3.jpg" alt="" style="width:100%">
-      <div class="w3-container w3-white">
-        <p><b>Sushi Sashimi</b></p>
-        <p>Sushi original jepang dengan topping daging salmon segar</p>
-        <p>Rp 18.000,00</p>
-        <form id='myform' method='POST' class='quantity' action='#'>
-          <input type='button' value='-' class='qtyminus minus' field='quantity' />
-          <input type='text' name='quantity' value='0' class='qty' />
-          <input type='button' value='+' class='qtyplus plus' field='quantity' />
-        </form>
-      </div>
-    </div>
-    <div class="w3-row-padding w3-center">
-    <button type="button" class="button button3" data-toggle="modal" data-target="#exampleModal">
-        Order
-    </button>
-    </div>
-    <div class="w3-row-padding">
-    <table class="table">
-        <tr>
-        <th>Nama</th>
-        <th>Qty</th> 
-        <th>Harga</th> 
-        </tr>
-        @foreach($orderan as $orderan)
-        <td>{{$orderan->nama}}</td>
-        <td>{{$orderan->qty}}</td>
-        <td>{{$orderan->harga}}</td>
-        </tr>
-        @endforeach
-      </div>
-        </div>
-
-        </div>
-        
-<div id="output"></div>
-<!-- Load Babel -->
-<!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <!-- Your custom script here -->
 <script type="text/babel">
@@ -245,6 +203,5 @@ jQuery(document).ready(($) => {
         });
     });
 </script>
-
 </body>
 </html>

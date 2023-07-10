@@ -57,8 +57,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   </div>
   <div class="w3-bar-block">
     <a href="/menu" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-white"><i class="fa fa-cutlery fa-fw w3-margin-right"></i>MENU</a> 
-    <a href="/profiluser" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>PROFIL</a> 
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
+    <a href="/profil" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>PROFIL</a> 
+    <a href="/keranjang" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cart-plus fa-fw w3-margin-right"></i>KERANJANG</a>
   </div>
   <div class="w3-panel w3-large">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
@@ -78,12 +78,36 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <h1><b>PROFIL</b></h1>
     <div class="w3-section w3-bottombar ">
     </div>
+    <div class="form-group">
+    <label for="">Nama:</label>
+    <input type="" class="form-control" id="">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd">
+    <input type="checkbox" onclick="myFunction()"> Show Password
+  <script>
+      function myFunction() {
+      var x = document.getElementById("pwd");
+      if (x.type === "password") {
+          x.type = "text";
+      } else {
+          x.type = "password";
+    }
+}
+</script>
+
+  </div>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" class="form-control" id="email">
+  </div>
+  <div class="form-group">
+    <label for="tlp">Telepon:</label>
+    <input type="number" class="form-control" id="tlp">
+  </div>
+  <button type="submit" class="btn fa w3-blue">Simpan</button>
     </div>
   </header>
-
-  
-
- 
-   
 </body>
 </html>
